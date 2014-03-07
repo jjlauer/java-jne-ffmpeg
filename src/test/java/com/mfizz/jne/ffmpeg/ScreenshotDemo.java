@@ -30,8 +30,8 @@ import org.slf4j.LoggerFactory;
  *
  * @author joelauer
  */
-public class VersionDemo {
-    private static final Logger logger = LoggerFactory.getLogger(VersionDemo.class);
+public class ScreenshotDemo {
+    private static final Logger logger = LoggerFactory.getLogger(ScreenshotDemo.class);
     
     static public void main(String[] args) throws Exception {
         String exeName = "ffmpeg";
@@ -57,7 +57,6 @@ public class VersionDemo {
             public void onLine(String line) {
                 logger.debug(line);
             }
-
             @Override
             public void onException(Exception e) {
                 logger.error("Unable to cleanly gobble process output", e);
@@ -67,5 +66,6 @@ public class VersionDemo {
         
         int retVal = p.waitFor();
         logger.info("ret val: " + retVal);
-    }    
+    }
+    
 }
