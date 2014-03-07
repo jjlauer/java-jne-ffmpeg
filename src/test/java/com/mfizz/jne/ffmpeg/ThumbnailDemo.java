@@ -37,7 +37,7 @@ public class ThumbnailDemo {
     private static final Logger logger = LoggerFactory.getLogger(ThumbnailDemo.class);
     
     static public void main(String[] args) throws Exception {
-        //String streamLink = "https://r7---sn-jvhj5nu-a5me.googlevideo.com/videoplayback?source=youtube&ip=67.171.19.56&expire=1393665982&sparams=id%2Cip%2Cipbits%2Citag%2Cratebypass%2Crequiressl%2Csource%2Cupn%2Cexpire&ipbits=0&signature=309B8D9011DD116FF8CBC5A97E24F4C4A124C609.A8FF677E2B67F079958A9410D334ACAA052F8C98&upn=kj5JkB4dlq0&key=yt5&id=4a429ea82245176b&fexp=943902%2C912300%2C940000%2C932260%2C919007%2C914930%2C914095%2C916612%2C937417%2C937416%2C913434%2C936910%2C936913%2C902907&mt=1393639387&ratebypass=yes&itag=43&sver=3&mv=m&requiressl=yes&ms=au";
+        // various media files on web based on big bunny
         String streamLink = "http://download.blender.org/peach/bigbuckbunny_movies/big_buck_bunny_1080p_h264.mov";
         //String streamLink = "http://download.blender.org/peach/bigbuckbunny_movies/big_buck_bunny_1080p_surround.avi";
         //String streamLink = "http://download.blender.org/peach/bigbuckbunny_movies/big_buck_bunny_1080p_stereo.ogg";
@@ -86,49 +86,6 @@ public class ThumbnailDemo {
         
         int retVal = p.waitFor();
         logger.info("ret val: " + retVal);
-        
-        
-        
-        
-        /**
-        
-        
-        ProcessBuilder pb = new ProcessBuilder(commands);
-        pb.redirectOutput(ProcessBuilder.Redirect.INHERIT);
-        pb.redirectError(ProcessBuilder.Redirect.INHERIT);
-        Process p = pb.start();
-        
-        // very simple method to wait for process
-        long now = System.currentTimeMillis(); 
-        long finish = now + timeoutMillis;
-        
-        while (isAlive(p)) {
-            // wait in chunks of 1sec
-            Thread.sleep(1000);
-            if (System.currentTimeMillis() >= finish && isAlive(p)) {             
-                // if still alive after expiration, kill the process
-                p.destroy();
-                throw new IOException("ffmpeg process exceeded timeout [" + timeoutMillis + " ms]");
-            }
-        }
-        
-        // if we get here an exit value SHOULD exist
-        int retVal = p.exitValue();
-        if (retVal != 0) {
-            throw new IOException("ffmpeg exited with non-zero value [" + retVal + "]");
-        }
-        
-        // does the thumbnail exist?
-        if (!targetThumbnailFile.exists()) {
-            throw new IOException("ffmpeg process did not generate thumbnail file (not sure what happened)");
-        }
-        
-        ProcessBuilder pb = new ProcessBuilder(
-            ffmpegExeFile.getAbsolutePath(),
-            "-version"
-        );
-        */
-        
     }
     
 }
