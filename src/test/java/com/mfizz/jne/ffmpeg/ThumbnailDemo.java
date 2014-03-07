@@ -23,7 +23,6 @@ package com.mfizz.jne.ffmpeg;
 import com.mfizz.jne.JNE;
 import com.mfizz.jne.StreamGobbler;
 import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -38,7 +37,12 @@ public class ThumbnailDemo {
     private static final Logger logger = LoggerFactory.getLogger(ThumbnailDemo.class);
     
     static public void main(String[] args) throws Exception {
-        String streamLink = "https://r7---sn-jvhj5nu-a5me.googlevideo.com/videoplayback?source=youtube&ip=67.171.19.56&expire=1393665982&sparams=id%2Cip%2Cipbits%2Citag%2Cratebypass%2Crequiressl%2Csource%2Cupn%2Cexpire&ipbits=0&signature=309B8D9011DD116FF8CBC5A97E24F4C4A124C609.A8FF677E2B67F079958A9410D334ACAA052F8C98&upn=kj5JkB4dlq0&key=yt5&id=4a429ea82245176b&fexp=943902%2C912300%2C940000%2C932260%2C919007%2C914930%2C914095%2C916612%2C937417%2C937416%2C913434%2C936910%2C936913%2C902907&mt=1393639387&ratebypass=yes&itag=43&sver=3&mv=m&requiressl=yes&ms=au";
+        //String streamLink = "https://r7---sn-jvhj5nu-a5me.googlevideo.com/videoplayback?source=youtube&ip=67.171.19.56&expire=1393665982&sparams=id%2Cip%2Cipbits%2Citag%2Cratebypass%2Crequiressl%2Csource%2Cupn%2Cexpire&ipbits=0&signature=309B8D9011DD116FF8CBC5A97E24F4C4A124C609.A8FF677E2B67F079958A9410D334ACAA052F8C98&upn=kj5JkB4dlq0&key=yt5&id=4a429ea82245176b&fexp=943902%2C912300%2C940000%2C932260%2C919007%2C914930%2C914095%2C916612%2C937417%2C937416%2C913434%2C936910%2C936913%2C902907&mt=1393639387&ratebypass=yes&itag=43&sver=3&mv=m&requiressl=yes&ms=au";
+        String streamLink = "http://download.blender.org/peach/bigbuckbunny_movies/big_buck_bunny_1080p_h264.mov";
+        //String streamLink = "http://download.blender.org/peach/bigbuckbunny_movies/big_buck_bunny_1080p_surround.avi";
+        //String streamLink = "http://download.blender.org/peach/bigbuckbunny_movies/big_buck_bunny_1080p_stereo.ogg";
+        //String streamLink = "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_640x360.m4v";
+        String thumbnailSeekPos = "00:00:59";
         
         String exeName = "ffmpeg";
         File ffmpegExeFile = JNE.find(exeName, JNE.FindType.EXECUTABLE);
@@ -56,7 +60,7 @@ public class ThumbnailDemo {
         File storageDir = new File("target");
         File targetThumbnailFile = new File(storageDir, "thumbnail.jpg");
         
-        String thumbnailSeekPos = "00:00:01";
+        
         
         List<String> commands = new ArrayList<String>();
         commands.add(ffmpegExeFile.getAbsolutePath());
