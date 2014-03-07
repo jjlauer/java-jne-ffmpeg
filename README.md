@@ -24,3 +24,5 @@ http://ffmpeg.gusari.org/static/
 ### Demos
 
 mvn -e test-compile exec:java -Dexec.classpathScope="test" -Dexec.mainClass="com.mfizz.jne.ffmpeg.VersionDemo" -Dexec.args=""
+
+mvn -e test-compile exec:java -Dexec.classpathScope="test" -Dexec.mainClass="com.mfizz.jne.ffmpeg.ThumbnailDemo" -Dexec.args=""
