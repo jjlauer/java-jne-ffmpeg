@@ -4,6 +4,7 @@ Native executable "ffmpeg" to be easily embedded and used from Java as a depende
 The upstream ffmpeg version that is included in this jar will match the version
 of this jar. So "mfz-jne-ffmpeg-2.1.4.jar" will be based on ffmpeg v2.1.4.
 
+
 ### Static builds of ffmpeg
 
 #### Windows
@@ -26,3 +27,7 @@ http://ffmpeg.gusari.org/static/
 mvn -e test-compile exec:java -Dexec.classpathScope="test" -Dexec.mainClass="com.mfizz.jne.ffmpeg.VersionDemo" -Dexec.args=""
 
 mvn -e test-compile exec:java -Dexec.classpathScope="test" -Dexec.mainClass="com.mfizz.jne.ffmpeg.ThumbnailDemo" -Dexec.args=""
+
+### Compiling on various platforms
+
+Linux: FFMPEG_LINUX.md
