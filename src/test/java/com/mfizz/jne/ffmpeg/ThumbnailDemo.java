@@ -45,7 +45,7 @@ public class ThumbnailDemo {
         String thumbnailSeekPos = "00:00:59";
         
         String exeName = "ffmpeg";
-        File ffmpegExeFile = JNE.find(exeName, JNE.FindType.EXECUTABLE);
+        File ffmpegExeFile = JNE.findExecutable(exeName);
         
         if (ffmpegExeFile == null) {
             logger.error("Unable to find executable [" + exeName + "]");

@@ -35,7 +35,7 @@ public class VersionDemo {
     
     static public void main(String[] args) throws Exception {
         String exeName = "ffmpeg";
-        File ffmpegExeFile = JNE.find(exeName, JNE.FindType.EXECUTABLE);
+        File ffmpegExeFile = JNE.findExecutable(exeName);
         
         if (ffmpegExeFile == null) {
             logger.error("Unable to find executable [" + exeName + "]");
