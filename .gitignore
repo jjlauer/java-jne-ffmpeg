@@ -1,7 +1,2 @@
-/target/
-/ffmpeg/
-/mfz-jne-ffmpeg-windows-x32 (copy)/target/
-/mfz-jne-ffmpeg-linux-x32/target/
-/mfz-jne-ffmpeg-linux-x32 (copy)/target/
-/mfz-jne-ffmpeg-osx-x64/target/
-/mfz-jne-ffmpeg-demo/target/
+target/
+ffmpeg/
