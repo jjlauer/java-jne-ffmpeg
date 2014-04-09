@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.mfizz</groupId>
     <artifactId>mfz-jne-ffmpeg</artifactId>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
     <version>2.1.4.1-SNAPSHOT</version>
     <name>mfz-jne-ffmpeg</name>
     <description>Native executable "ffmpeg" to be easily embedded and used from Java as a dependency</description>
@@ -24,43 +24,15 @@
         </resources>
     </build>
 
-    <dependencies>
-        <!-- compile -->
-        <dependency>
-            <groupId>com.mfizz</groupId>
-            <artifactId>mfz-jne</artifactId>
-            <version>1.0.1</version>
-        </dependency>
-        <!-- provided -->
-        <!-- testing -->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.7.5</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-core</artifactId>
-            <version>1.0.13</version>
-            <scope>test</scope>
-        </dependency><dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>1.0.13</version>
-            <scope>test</scope>
-        </dependency>
-        
-    </dependencies>
+    <modules>
+        <module>mfz-jne-ffmpeg-core</module>
+		<module>mfz-jne-ffmpeg-windows-x32</module>
+		<module>mfz-jne-ffmpeg-linux-x32</module>
+        <module>mfz-jne-ffmpeg-osx-x64</module>
+	</modules>
 
     <properties>
-        <license.skip>false</license.skip>
-        <main.java.package>com.mfizz.jne.ffmpeg</main.java.package>
+        <license.skip>true</license.skip>
+        <main.java.package></main.java.package>
     </properties>
 </project>
