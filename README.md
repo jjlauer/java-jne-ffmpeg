@@ -18,17 +18,19 @@ Supports x64 version >= 10.6., 10.7., 10.8. or 10.9 (Snow Leopard, Lion, Mountai
 
     http://ffmpegmac.net/
 
+    http://www.evermeet.cx/ffmpeg/ (also has ffprobe; which we need)
+
 #### Linux
 
 Supports x86/x64 version >= 3.2.x
 
     http://ffmpeg.gusari.org/static/
 
-### Demos
+### Updating all module versions to match parent
 
-    mvn -e test-compile exec:java -Dexec.classpathScope="test" -Dexec.mainClass="com.mfizz.jne.ffmpeg.VersionDemo" -Dexec.args=""
+Update parent pom to version you'd like, then:
 
-    mvn -e test-compile exec:java -Dexec.classpathScope="test" -Dexec.mainClass="com.mfizz.jne.ffmpeg.ThumbnailDemo" -Dexec.args=""
+    mvn -N versions:update-child-modules
 
 ### Compiling on various platforms
 
