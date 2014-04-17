@@ -15,11 +15,6 @@
 
     <dependencies>
         <!-- compile -->
-        <dependency>
-            <groupId>com.mfizz</groupId>
-            <artifactId>mfz-jne</artifactId>
-            <version>1.0.1</version>
-        </dependency>
         <!-- provided -->
         <!-- testing -->
     </dependencies>
