@@ -2,11 +2,11 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.mfizz</groupId>
-    <artifactId>mfz-jne-ffmpeg</artifactId>
+    <artifactId>mfz-primetv-ffmpeg</artifactId>
     <packaging>pom</packaging>
     <version>2.2.1.0</version>
-    <name>mfz-jne-ffmpeg</name>
-    <description>Native executable "ffmpeg" to be easily embedded and used from Java as a dependency</description>
+    <name>mfz-primetv-ffmpeg</name>
+    <description>Native executable ffmpeg and ffprobe packaged to be easily embedded and used from Java as a dependency</description>
   
     <parent>
         <groupId>com.mfizz</groupId>
@@ -25,12 +25,19 @@
     </build>
 
     <modules>
-        <module>mfz-jne-ffmpeg-core</module>
-        <module>mfz-jne-ffmpeg-windows-x32</module>
-        <module>mfz-jne-ffmpeg-linux-x32</module>
-        <module>mfz-jne-ffmpeg-osx-x64</module>
-        <module>mfz-jne-ffmpeg-all</module>
-        <module>mfz-jne-ffmpeg-demo</module>
+        <module>mfz-primetv-ffmpeg-core</module>
+		<!-- ffmpeg binaries -->
+        <module>mfz-primetv-ffmpeg-windows-x32</module>
+        <module>mfz-primetv-ffmpeg-linux-x32</module>
+        <module>mfz-primetv-ffmpeg-osx-x64</module>
+        <module>mfz-primetv-ffmpeg-all</module>
+		<!-- ffprobe binaries -->
+		<module>mfz-primetv-ffprobe-windows-x32</module>
+        <module>mfz-primetv-ffprobe-linux-x32</module>
+        <module>mfz-primetv-ffprobe-osx-x64</module>
+        <module>mfz-primetv-ffprobe-all</module>
+		<!-- demo across both -->
+        <module>mfz-primetv-ffmpeg-demo</module>
     </modules>
 
     <dependencies>

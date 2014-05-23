@@ -1,8 +1,8 @@
 ### Overview
 
-Native executable "ffmpeg" to be easily embedded and used from Java as a dependency.
+Native executables ffmpeg and ffprobe packaged to be easily embedded and used from Java as a dependency.
 The upstream ffmpeg version that is included in this jar will match the version
-of this jar. So "mfz-jne-ffmpeg-2.1.4.jar" will be based on ffmpeg v2.1.4.
+of this jar. So "mfz-primetv-ffmpeg-2.1.4.jar" will be based on ffmpeg v2.1.4.
 
 ### Static builds of ffmpeg
 
